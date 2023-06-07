@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="22dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.fragments.CoinsListFragment">
+
+    <TextView
+        android:id="@+id/crypto_currencies_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cryptocurrencies"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="22dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/app_mode_toggle"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_nightlight_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/crypto_currencies_label"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        tools:listitem="@layout/item_coins_list"
+        app:layout_constraintTop_toBottomOf="@+id/crypto_currencies_label"
+        app:layout_constraintStart_toStartOf="@id/crypto_currencies_label"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

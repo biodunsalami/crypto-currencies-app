@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">CryptoCurrencies</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cryptocurrencies">CryptoCurrencies</string>
+    <string name="coin_name_in_details">%1$s. %2$s (%3$s)</string>
+    <string name="tags">Tags</string>
+    <string name="team_members">Team Members</string>
 </resources>
