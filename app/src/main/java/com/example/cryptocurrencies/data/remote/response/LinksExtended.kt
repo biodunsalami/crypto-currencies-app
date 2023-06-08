@@ -1,4 +1,4 @@
-package com.example.cryptocurrencies.data.remote.dto
+package com.example.cryptocurrencies.data.remote.response
 
 data class LinksExtended(
     val stats: Stats,

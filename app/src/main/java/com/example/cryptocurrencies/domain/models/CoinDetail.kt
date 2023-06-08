@@ -1,6 +1,6 @@
 package com.example.cryptocurrencies.domain.models
 
-import com.example.cryptocurrencies.data.remote.dto.*
+import com.example.cryptocurrencies.data.remote.response.*
 
 data class CoinDetail(
     val coinId: String,

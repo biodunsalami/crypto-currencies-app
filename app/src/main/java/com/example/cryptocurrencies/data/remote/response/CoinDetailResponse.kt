@@ -1,9 +1,9 @@
-package com.example.cryptocurrencies.data.remote.dto
+package com.example.cryptocurrencies.data.remote.response
 
 import com.example.cryptocurrencies.domain.models.CoinDetail
 import com.google.gson.annotations.SerializedName
 
-data class CoinDetailDto(
+data class CoinDetailResponse(
     val description: String,
     @SerializedName("development_status")
     val developmentStatus: String,
@@ -42,7 +42,7 @@ data class CoinDetailDto(
     val whitepaper: Whitepaper
 )
 
-fun CoinDetailDto.toCoinDetails(): CoinDetail {
+fun CoinDetailResponse.toCoinDetails(): CoinDetail {
     return CoinDetail(
         coinId = id,
         name = name,
