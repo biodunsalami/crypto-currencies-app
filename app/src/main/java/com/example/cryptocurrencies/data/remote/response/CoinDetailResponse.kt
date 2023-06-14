@@ -2,38 +2,41 @@ package com.example.cryptocurrencies.data.remote.response
 
 import com.example.cryptocurrencies.domain.models.CoinDetail
 import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
+@JsonClass(generateAdapter = true)
 data class CoinDetailResponse(
     val description: String,
-    @SerializedName("development_status")
+    @Json(name = "development_status")
     val developmentStatus: String,
-    @SerializedName("first_data_at")
+    @Json(name = "first_data_at")
     val firstDataAt: String,
-    @SerializedName("hardware_wallet")
+    @Json(name = "hardware_wallet")
     val hardwareWallet: Boolean,
-    @SerializedName("hash_algorithm")
+    @Json(name = "hash_algorithm")
     val hashAlgorithm: String,
     val id: String,
-    @SerializedName("is_active")
+    @Json(name = "is_active")
     val isActive: Boolean,
-    @SerializedName("is_new")
+    @Json(name = "is_new")
     val isNew: Boolean,
-    @SerializedName("last_data_at")
+    @Json(name = "last_data_at")
     val lastDataAt: String,
     val links: Links,
-    @SerializedName("links_extended")
+    @Json(name = "links_extended")
     val linksExtended: List<LinksExtended>,
     val logo: String,
     val message: String,
     val name: String,
-    @SerializedName("open_source")
+    @Json(name = "open_source")
     val openSource: Boolean,
-    @SerializedName("org_structure")
+    @Json(name = "org_structure")
     val orgStructure: String,
-    @SerializedName("proof_type")
+    @Json(name = "proof_type")
     val proofType: String,
     val rank: Int,
-    @SerializedName("started_at")
+    @Json(name = "started_at")
     val startedAt: String,
     val symbol: String,
     val tags: List<Tag>,

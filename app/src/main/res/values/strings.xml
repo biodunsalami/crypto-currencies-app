@@ -6,4 +6,5 @@
     <string name="coin_name_in_details">%1$s. %2$s (%3$s)</string>
     <string name="tags">Tags</string>
     <string name="team_members">Team Members</string>
+    <string name="id">%1$s.</string>
 </resources>

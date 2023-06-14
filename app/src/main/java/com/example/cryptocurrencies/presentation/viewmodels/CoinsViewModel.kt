@@ -29,25 +29,23 @@ class CoinsViewModel @Inject constructor(
 
     init {
         getCoins()
-        Log.e("Result", "fired")
 
     }
 
     fun getCoins() {
-        Log.e("Result", "fired")
         getCoinsUseCase().onEach { result ->
             when (result) {
                 is Resource.Loading -> {
                     _coinList.value = result
-                    Log.e("Result", result.toString())
+                    Log.e("Result", result.data.toString())
                 }
                 is Resource.Success -> {
                     _coinList.value = result
-                    Log.e("Result", result.toString())
+                    Log.e("Result", result.data.toString())
                 }
                 is Resource.Error -> {
                     _coinList.value = result
-                    Log.e("Result", result.toString())
+                    Log.e("Result", result.data.toString())
                 }
 
             }
